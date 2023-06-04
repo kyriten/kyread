@@ -1,3 +1,7 @@
+*{
+    font-family: 'Barlow', sans-serif;
+}
+
 .navbar-brand{
     color: rgb(67, 170, 255);
     font-family: 'Barlow', sans-serif;
@@ -48,29 +52,15 @@
 }
 .middle-container{
 	border-radius: 12px;
-
+    background-color: #eee;
 }
 .middle-container:hover {
 	border: 1px solid rgb(67, 170, 255);
 }
 .dollar-div{
 	background-color: rgb(67, 170, 255);
-	padding: 10px;
+	padding: 12px;
 	border-radius: 10px;
-}
-.round-div{
-	border-radius: 25%;
-	width: 35px;
-	height: 35px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-.dollar{
-	font-size: 13px !important;
-	color: rgb(67, 170, 255) !important;
-	font-weight: bold !important;
 }
 
 .current-balance{
@@ -83,7 +73,7 @@
 	font-size: 13px;
 	font-weight: bold;
 }
-.dollar-sign{
+.currency-sign{
 	font-size: 13px;
 	color: #272727;
 	font-weight: bold;
