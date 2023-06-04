@@ -39,7 +39,7 @@
                                         aria-labelledby="navbarDropdownMenuLink">
                                         <div class="container d-flex justify-content-center mb-3">
                                             <div class="card profile-area shadow-none">
-                                                <div class="top-container">
+                                                <div class="top-container mt-3">
                                                     <img class="img-fluid profile-image"
                                                         src="https://bootdey.com/img/Content/avatar/avatar7.png"
                                                         width="50">
@@ -51,12 +51,15 @@
 
                                                 <div class="middle-container d-flex align-items-center mt-3 p-2">
                                                     <div class="dollar-div px-3">
-                                                        <div class="round-div"><i class="fa fa-dollar dollar"></i></div>
+                                                        <div class="rounded-circle bg-light px-3 py-2"><i
+                                                                class="fa-solid fa-rupiah-sign"
+                                                                style="color: #43aaff;"></i>
+                                                        </div>
                                                     </div>
                                                     <div class="d-flex flex-column text-start ms-2 me-2">
                                                         <span class="current-balance">Current Balance</span>
                                                         <span class="amount"><span
-                                                                class="dollar-sign">$</span>188563</span>
+                                                                class="dollar-sign">Rp</span>188511563</span>
                                                     </div>
                                                 </div>
                                             </div>
