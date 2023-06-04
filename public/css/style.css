@@ -1,0 +1,146 @@
+.navbar-brand{
+    color: rgb(67, 170, 255);
+    font-family: 'Barlow', sans-serif;
+    font-size: 34px;
+    font-weight: 550;
+    font-style: italic;
+}
+#promo-banner{
+    height: 370px
+}
+.list-group-item{
+    padding: 2rem
+}
+.cart{
+    color: rgb(67, 170, 255)
+}
+#profile-btn{
+    color: rgb(67, 170, 255)
+}
+.user-name{
+    font-family: 'Barlow', sans-serif;
+    font-size: small;
+}
+.profile-area{
+	background-color: #fff;
+	width: 200px;
+    border: none;
+}
+.top-container{
+	display: flex;
+	align-items: center;
+}
+.profile-image{
+	border-radius: 10px;
+	border: 2px solid rgb(67, 170, 255);
+}
+.name{
+	font-size: 15px;
+	font-weight: bold;
+	color: #272727;
+	position: relative;
+	top: 8px;
+}
+.mail{
+	font-size: 14px;
+	color: grey;
+	position: relative;
+	top: 2px;
+}
+.middle-container{
+	background-color: #eee;
+	border-radius: 12px;
+
+}
+.middle-container:hover {
+	border: 1px solid rgb(67, 170, 255);
+}
+.dollar-div{
+	background-color: rgb(67, 170, 255);
+	padding: 10px;
+	border-radius: 10px;
+}
+.round-div{
+	border-radius: 25%;
+	width: 35px;
+	height: 35px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.dollar{
+	font-size: 13px !important;
+	color: rgb(67, 170, 255) !important;
+	font-weight: bold !important;
+}
+
+.current-balance{
+	font-size: 12px;
+	color: #272727;
+	font-weight: bold;
+}
+.amount{
+	color: rgb(67, 170, 255);
+	font-size: 13px;
+	font-weight: bold;
+}
+.dollar-sign{
+	font-size: 13px;
+	color: #272727;
+	font-weight: bold;
+}
+.account-settings .user-profile {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+.account-settings .user-profile .user-avatar {
+    margin: 0 0 1rem 0;
+}
+.account-settings .user-profile .user-avatar img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+.account-settings .user-profile h5.user-name {
+    margin: 0 0 0.5rem 0;
+}
+.account-settings .user-profile h6.user-email {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #9fa8b9;
+}
+.account-settings .about {
+    margin: 2rem 0 0 0;
+    text-align: center;
+}
+.account-settings .about h5 {
+    margin: 0 0 15px 0;
+    color: #007ae1;
+}
+.account-settings .about p {
+    font-size: 0.825rem;
+}
+.form-control {
+    border: 1px solid #cfd1d8;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .825rem;
+    background: #ffffff;
+    color: #2e323c;
+}
+
+.edit-profile {
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
