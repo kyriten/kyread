@@ -21,7 +21,7 @@
 <body>
     <div class="row justify-content-center">
         <div class="col-md-3 position-absolute top-50 start-50 translate-middle">
-            <a class="navbar-brand justify-content-center mb-3" href="/access">
+            <a class="navbar-brand justify-content-center mb-3" href="/">
                 <h3 class="text-dark fw-semibold me-2">WELCOME TO</h3>
                 {{ config('app.name') }}
             </a>
