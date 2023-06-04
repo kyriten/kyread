@@ -22,7 +22,6 @@
     font-size: small;
 }
 .profile-area{
-	background-color: #fff;
 	width: 200px;
     border: none;
 }
@@ -48,7 +47,6 @@
 	top: 2px;
 }
 .middle-container{
-	background-color: #eee;
 	border-radius: 12px;
 
 }
@@ -64,7 +62,6 @@
 	border-radius: 25%;
 	width: 35px;
 	height: 35px;
-	background-color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;

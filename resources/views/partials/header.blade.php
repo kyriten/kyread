@@ -38,7 +38,7 @@
                                     <ul class="dropdown-menu dropdown-menu-end"
                                         aria-labelledby="navbarDropdownMenuLink">
                                         <div class="container d-flex justify-content-center mb-3">
-                                            <div class="card profile-area">
+                                            <div class="card profile-area shadow-none">
                                                 <div class="top-container">
                                                     <img class="img-fluid profile-image"
                                                         src="https://bootdey.com/img/Content/avatar/avatar7.png"
