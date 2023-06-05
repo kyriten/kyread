@@ -12,13 +12,22 @@
                                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png"
                                         alt="Abimanyu Okysaputra Rachman">
                                 </div>
-                                <h5 class="user-name">Abimanyu Okysaputra Rachman</h5>
-                                <h6 class="user-email">kyridev@ieee.org</h6>
+                                <h5 class="user-name">
+                                    @if (auth()->user()->fullname === null)
+                                        {{ auth()->user()->nickname }}
+                                    @else
+                                        {{ auth()->user()->fullname }}
+                                    @endif
+                                </h5>
+                                <h6 class="user-email">{{ auth()->user()->email }}</h6>
                             </div>
                             <div class="about">
                                 <h5>About</h5>
-                                <p>I'm Abimanyu. Full Stack Designer I enjoy creating user-centric, delightful and human
-                                    experiences.</p>
+                                @if (auth()->user()->about === null)
+                                    Fill in your shortest bio.
+                                @else
+                                    {{ auth()->user()->about }}
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -34,27 +43,68 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-2">
                                 <div class="form-group">
                                     <label for="fullName">Full Name</label>
-                                    <input class="form-control" id="fullName" type="text" placeholder="Enter full name">
+                                    <input class="form-control @error('fullname') is-invalid @enderror" id="fullName"
+                                        name="fullname" type="text" placeholder="Enter full name">
+                                    @error('fullname')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-2">
                                 <div class="form-group">
-                                    <label for="eMail">Email</label>
-                                    <input class="form-control" id="eMail" type="email" placeholder="Enter email ID">
+                                    <label for="nickName">Nick Name</label>
+                                    <input class="form-control @error('nickname') is-invalid @enderror" id="fullName"
+                                        name="nickname" type="text" placeholder="Enter nick name">
+                                    @error('nickname')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-3">
                                 <div class="form-group">
-                                    <label for="about">About</label>
-                                    <input class="form-control" id="phone" type="text"
-                                        placeholder="Describe your self">
+                                    <label for="userName">User Name</label>
+                                    <input class="form-control @error('username') is-invalid @enderror" id="fullName"
+                                        name="username" type="text" placeholder="Enter user name">
+                                    @error('username')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-3">
+                                <div class="form-group">
+                                    <label for="eMail">Email</label>
+                                    <input class="form-control @error('email') is-invalid @enderror" id="eMail"
+                                        name="email" type="email" placeholder="Enter email ID">
+                                    @error('email')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-3">
                                 <div class="form-group">
                                     <label for="phone">Phone</label>
-                                    <input class="form-control" id="website" type="text"
-                                        placeholder="Enter phone number">
+                                    <input class="form-control @error('phone') is-invalid @enderror" id="website"
+                                        name="phone" type="text" placeholder="Enter phone number">
+                                    @error('phone')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-3">
+                                <div class="form-group">
+                                    <label for="about">About</label>
+                                    <input class="form-control" id="phone" name="about" type="text"
+                                        placeholder="Describe your self">
                                 </div>
                             </div>
                         </div>
@@ -90,10 +140,10 @@
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
                                 <div class="text-end">
-                                    <button class="btn btn-secondary" id="submit" name="submit"
-                                        type="button">Cancel</button>
-                                    <button class="btn btn-primary" id="submit" name="submit"
-                                        type="button">Update</button>
+                                    <button class="btn btn-secondary" id="reset"
+                                        type="reset">{{ __('CANCEL') }}</button>
+                                    <button class="btn btn-primary" id="submit"
+                                        type="submit">{{ __('SUBMIT') }}</button>
                                 </div>
                             </div>
                         </div>

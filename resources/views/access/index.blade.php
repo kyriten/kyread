@@ -2,23 +2,37 @@
 
 @section('formLogin')
     <div class="card p-4">
+        @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button class="btn-close" data-bs-dismiss="alert" type="button" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if (session()->has('loginError'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('loginError') }}
+                <button class="btn-close" data-bs-dismiss="alert" type="button" aria-label="Close"></button>
+            </div>
+        @endif
+
         <!-- Pills navs -->
         <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
-                    aria-controls="pills-login" aria-selected="true">Login</a>
+                <a class="nav-link fw-bold text-dark {{ $active === 'access' }}" id="tab-login" data-mdb-toggle="pill"
+                    href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Login</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
-                    aria-controls="pills-register" aria-selected="false">Register</a>
+                <a class="nav-link fw-bold text-dark {{ $active === 'access' }}" id="tab-register" data-mdb-toggle="pill"
+                    href="#pills-register" role="tab" aria-controls="pills-register" aria-selected="false">Register</a>
             </li>
         </ul>
         <!-- Pills navs -->
-
         <!-- Pills content -->
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-                <form>
+            <div class="tab-pane fade show" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                <form action="/login" method="post">
+                    @csrf
                     <div class="text-center mb-3">
                         <p>Sign in with:</p>
                         <button class="btn btn-link btn-floating mx-1" type="button">
@@ -42,13 +56,19 @@
 
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input class="form-control" id="loginName" type="email" />
-                        <label class="form-label" for="loginName">Email or username</label>
+                        <input class="form-control @error('login_email') is-invalid @enderror" id="loginName"
+                            name="login_email" type="text" value="{{ old('login_email') }}" required />
+                        <label class="form-label" for="loginName">Email</label>
+                        @error('login_email')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                        <input class="form-control" id="loginPassword" type="password" />
+                        <input class="form-control" id="loginPassword" name="login_password" type="password" required />
                         <label class="form-label" for="loginPassword">Password</label>
                     </div>
 
@@ -69,11 +89,12 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button class="btn btn-primary btn-block mb-3" type="submit">Sign in</button>
+                    <button class="btn btn-primary btn-block mb-3" type="submit">{{ __('SIGN IN') }}</button>
                 </form>
             </div>
             <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-                <form>
+                <form action="/register" method="POST">
+                    @csrf
                     <div class="text-center mb-3">
                         <p>Sign up with:</p>
                         <button class="btn btn-link btn-floating mx-1" type="button">
@@ -95,33 +116,58 @@
 
                     <p class="text-center">or:</p>
 
-                    <!-- Name input -->
+                    <!-- Nick Name input -->
                     <div class="form-outline mb-4">
-                        <input class="form-control" id="registerName" type="text" />
-                        <label class="form-label" for="registerName">Name</label>
+                        <input class="form-control @error('nickname') is-invalid @enderror" id="registerName"
+                            name="nickname" type="text" value="{{ old('nickname') }}" required />
+                        <label class="form-label" for="registerName">Nick Name</label>
+                        @error('nickname')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     <!-- Username input -->
                     <div class="form-outline mb-4">
-                        <input class="form-control" id="registerUsername" type="text" />
+                        <input class="form-control @error('username') is-invalid @enderror" id="registerUsername"
+                            name="username" type="text" value="{{ old('username') }}" required />
                         <label class="form-label" for="registerUsername">Username</label>
+                        @error('username')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input class="form-control" id="registerEmail" type="email" />
+                        <input class="form-control @error('email') is-invalid @enderror" id="registerEmail"
+                            name="email" type="email" value="{{ old('email') }}" required />
                         <label class="form-label" for="registerEmail">Email</label>
+                        @error('email')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                        <input class="form-control" id="registerPassword" type="password" />
+                        <input class="form-control @error('password') is-invalid @enderror" id="registerPassword"
+                            name="password" type="password" required />
                         <label class="form-label" for="registerPassword">Password</label>
+                        @error('password')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
                     <!-- Repeat Password input -->
                     <div class="form-outline mb-4">
-                        <input class="form-control" id="registerRepeatPassword" type="password" />
+                        <input class="form-control @error('password') is-invalid @enderror" id="registerRepeatPassword"
+                            name="password_confirmation"type="password" required />
                         <label class="form-label" for="registerRepeatPassword">Repeat password</label>
                     </div>
 
@@ -135,7 +181,7 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button class="btn btn-primary btn-block mb-3" type="submit">Sign in</button>
+                    <button class="btn btn-primary btn-block mb-3" type="submit">{{ __('SUBMIT') }}</button>
                 </form>
             </div>
         </div>

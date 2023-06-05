@@ -100,7 +100,7 @@
     <!-- RECOMMENDATIONS -->
     <h5 class="fw-semibold mt-4">RECOMMENDATIONS</h5>
     {{-- Row 1 --}}
-    <div class="d-flex justify-content-between text-center mt-3">
+    <div class="d-flex justify-content-between d-block text-center mt-3">
         <div class="">
             <div class="card" style="width: 240px; height: 360px">
                 <div class="image-wrapper">

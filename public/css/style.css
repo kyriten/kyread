@@ -41,14 +41,6 @@
 	font-size: 15px;
 	font-weight: bold;
 	color: #272727;
-	position: relative;
-	top: 8px;
-}
-.mail{
-	font-size: 14px;
-	color: grey;
-	position: relative;
-	top: 2px;
 }
 .middle-container{
 	border-radius: 12px;
