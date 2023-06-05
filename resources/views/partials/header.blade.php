@@ -65,7 +65,7 @@
                                                 </div>
                                             </div>
                                             <li>
-                                                <form action="/editProfile" method="POST">
+                                                <form action="/editProfile" method="GET">
                                                     @csrf
                                                     <button class="dropdown-item" type="submit">Edit Profile</button>
                                                 </form>

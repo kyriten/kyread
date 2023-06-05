@@ -36,7 +36,7 @@
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="card edit-profile">
                     <div class="card-body">
-                        <div class="row gutters">
+                        <div class="row gutters g-3">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <h6 class="mb-2 text-primary">Personal Details</h6>
                             </div>
