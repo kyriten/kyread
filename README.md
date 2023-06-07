@@ -1,4 +1,6 @@
-# kyread
+<p align="center"><a href="https://github.com/kyriten/kyread"><img src="https://raw.githubusercontent.com/kyriten/kyread/master/kyread-logo.svg" width="400" alt="kyread Logo"></a></p>
+
+## Manual Guide to Fork Repo
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
 <ol>
@@ -13,7 +15,12 @@ A mini e-marketplace for bookstore. So here are the specifications of the applic
   
   Do this for access this project at your computer:
 
-Add .env file:
+### 1. Add vendor <br>
+Just run this command in your project without tick(') symbol: 
+<br>
+'composer install'
+
+### 2. Add .env file
 <ol>
   <li>Download the standard env.example file from the Laravel source code.</li>
 <li>Rename it to .env and edit it.</li>
@@ -22,11 +29,10 @@ Add .env file:
 <li>It will generate an application (encryption) key and add it to the .env file.</li>
 </ol>
 
-Add vendor: <br>
-Just run this command in your project without tick(') symbol: 
-<br>
-'composer install'
+### 3. Create Database
+Create database name 'db_kyread' it's possible to custom with yours, but equate it to the db that in the .env file. 
 
+### 4. Migrate
 Don't forget to migrate your database.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
