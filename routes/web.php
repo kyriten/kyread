@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\EditProfileController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -24,7 +24,8 @@ use App\Http\Controllers\RegisterController;
 // });
 
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth');
-Route::get('/editProfile', [EditProfileController::class, 'index']);
+Route::get('/edit-profile', [UserController::class, 'edit'])->name('profile');
+Route::put('/update-profile/{user}', [UserController::class, 'update'])->name('profile.update');
 Route::get('/cart', [CartController::class, 'index']);
 
 Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');

@@ -30,55 +30,58 @@
                                             class="fa-solid fa-cart-shopping fa-xl"></i></a>
                                 </li>
                                 <li class="nav-item dropdown ms-4 mx-auto">
-                                    @auth()
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                            role="button" aria-expanded="false">
-                                            <i class="fa-solid fa-user fa-xl" id="profile-btn"></i>
-                                            <label class="ms-2 user-name"
-                                                for="profile-btn">{{ auth()->user()->username }}</label>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-end"
-                                            aria-labelledby="navbarDropdownMenuLink">
-                                            <div class="container d-flex justify-content-center mb-3">
-                                                <div class="card profile-area shadow-none">
-                                                    <div class="top-container mt-3">
-                                                        <img class="img-fluid profile-image"
-                                                            src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                                                            width="50">
-                                                        <div class="row ms-2 mb-2">
-                                                            <h5 class="col name">{{ auth()->user()->nickname }}</h5>
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                        role="button" aria-expanded="false">
+                                        <i class="fa-solid fa-user fa-xl" id="profile-btn"></i>
+                                        <label class="ms-2 user-name"
+                                            for="profile-btn">{{ auth()->user()->username }}</label>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="navbarDropdownMenuLink">
+                                        <div class="container d-flex justify-content-center mb-3">
+                                            <div class="card profile-area shadow-none">
+                                                <div class="top-container mt-3">
+                                                    <img class="img-fluid profile-image"
+                                                        src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                                                        width="50">
+                                                    <div class="row ms-2 mb-2">
+                                                        <h5 class="col name">
+                                                            @if (auth()->user()->nickname === null)
+                                                                {{ auth()->user()->username }}
+                                                            @else
+                                                                {{ auth()->user()->nickname }}
+                                                            @endif
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div class="middle-container d-flex align-items-center mt-3 p-2">
+                                                    <div class="dollar-div px-3">
+                                                        <div class="rounded-circle bg-light px-3 py-2"><i
+                                                                class="fa-solid fa-rupiah-sign"
+                                                                style="color: #43aaff;"></i>
                                                         </div>
                                                     </div>
-                                                    <div class="middle-container d-flex align-items-center mt-3 p-2">
-                                                        <div class="dollar-div px-3">
-                                                            <div class="rounded-circle bg-light px-3 py-2"><i
-                                                                    class="fa-solid fa-rupiah-sign"
-                                                                    style="color: #43aaff;"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex flex-column text-start ms-2 me-2">
-                                                            <span class="current-balance">Current Balance</span>
-                                                            <span class="amount"><span
-                                                                    class="dollar-sign">Rp</span>188511563</span>
-                                                        </div>
+                                                    <div class="d-flex flex-column text-start ms-2 me-2">
+                                                        <span class="current-balance">Current Balance</span>
+                                                        <span class="amount"><span
+                                                                class="dollar-sign">Rp</span>188511563</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <li>
-                                                <form action="/editProfile" method="GET">
-                                                    @csrf
-                                                    <button class="dropdown-item" type="submit">Edit Profile</button>
-                                                </form>
-                                            <li>
-                                                <form action="/logout" method="POST">
-                                                    @csrf
-                                                    <button class="dropdown-item" type="submit"
-                                                        onclick="logout()">Logout</button>
-                                                </form>
-                                            </li>
-                                        </ul>
-                                    @endauth
-
+                                        </div>
+                                        <li>
+                                            <form action="/edit-profile" method="GET">
+                                                @csrf
+                                                <button class="dropdown-item" type="submit">Edit Profile</button>
+                                            </form>
+                                        <li>
+                                            <form action="/logout" method="POST">
+                                                @csrf
+                                                <button class="dropdown-item" type="submit"
+                                                    onclick="logout()">Logout</button>
+                                            </form>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>

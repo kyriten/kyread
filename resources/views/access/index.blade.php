@@ -89,7 +89,8 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button class="btn btn-primary btn-block mb-3" type="submit">{{ __('SIGN IN') }}</button>
+                    <button class="btn btn-primary btn-block mb-3 fw-bold text-light"
+                        type="submit">{{ __('LOGIn') }}</button>
                 </form>
             </div>
             <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
@@ -115,18 +116,6 @@
                     </div>
 
                     <p class="text-center">or:</p>
-
-                    <!-- Nick Name input -->
-                    <div class="form-outline mb-4">
-                        <input class="form-control @error('nickname') is-invalid @enderror" id="registerName"
-                            name="nickname" type="text" value="{{ old('nickname') }}" required />
-                        <label class="form-label" for="registerName">Nick Name</label>
-                        @error('nickname')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
 
                     <!-- Username input -->
                     <div class="form-outline mb-4">
@@ -168,7 +157,7 @@
                     <div class="form-outline mb-4">
                         <input class="form-control @error('password') is-invalid @enderror" id="registerRepeatPassword"
                             name="password_confirmation"type="password" required />
-                        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+                        <label class="form-label" for="registerRepeatPassword">Confirm Password</label>
                     </div>
 
                     <!-- Checkbox -->
@@ -181,7 +170,8 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button class="btn btn-primary btn-block mb-3" type="submit">{{ __('SUBMIT') }}</button>
+                    <button class="btn btn-primary btn-block mb-3 fw-bold text-light"
+                        type="submit">{{ __('SUBMIT') }}</button>
                 </form>
             </div>
         </div>
