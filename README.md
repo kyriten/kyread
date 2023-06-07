@@ -1,6 +1,6 @@
 <p align="center"><a href="https://github.com/kyriten/kyread"><img src="https://raw.githubusercontent.com/kyriten/kyread/master/kyread-logo.svg" width="400" alt="kyread Logo"></a></p>
 
-# Manual Guide to Fork Repo
+## Manual Guide to Fork Repo
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
 <ol>
