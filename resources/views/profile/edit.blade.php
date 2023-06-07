@@ -135,30 +135,63 @@
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-2">
                                     <div class="form-group">
-                                        <label for="Street">Street</label>
-                                        <input class="form-control" id="Street" type="name"
+                                        <label for="Street">Street</label> <br>
+                                        <small class="text-primary">(Contoh: nama jalan/gang no.rumah (jika ada), kelurahan,
+                                            kecamatan)</small>
+                                        <input class="form-control @error('street') is-invalid @enderror" id="Street"
+                                            name="street" type="name"
+                                            value="{{ old('street' . $user->street, auth()->user()->street) }}"
                                             placeholder="Enter Street">
+                                        @error('street')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-2">
                                     <div class="form-group">
-                                        <label for="ciTy">City</label>
-                                        <input class="form-control" id="ciTy" type="name"
+                                        <label for="ciTy">City</label> <br>
+                                        <small class="text-primary">(Contoh: Kota Depok)</small>
+                                        <input class="form-control @error('city') is-invalid @enderror" id="ciTy"
+                                            name="city" type="name"
+                                            value="{{ old('city' . $user->city, auth()->user()->city) }}"
                                             placeholder="Enter City">
+                                        @error('city')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-3">
                                     <div class="form-group">
-                                        <label for="sTate">Province</label>
-                                        <input class="form-control" id="province" type="text"
+                                        <label for="sTate">Province</label> <br>
+                                        <small class="text-primary">(Contoh: Jawa Barat)</small>
+                                        <input class="form-control @error('province') is-invalid @enderror" id="province"
+                                            name="province" type="text"
+                                            value="{{ old('province' . $user->province, auth()->user()->province) }}"
                                             placeholder="Enter Province">
+                                        @error('province')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-3">
                                     <div class="form-group">
-                                        <label for="zIp">Zip Code</label>
-                                        <input class="form-control" id="zIp" type="text"
+                                        <label for="zIp">Zip Code</label> <br>
+                                        <small class="text-primary">(Contoh: 16444)</small>
+                                        <input class="form-control @error('zipcode') is-invalid @enderror" id="zIp"
+                                            name="zipcode" type="text"
+                                            value="{{ old('zipcode' . $user->zipcode, auth()->user()->zipcode) }}"
                                             placeholder="Zip Code">
+                                        @error('zipcode')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>

@@ -20,6 +20,10 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('about')->nullable();
             $table->bigInteger('phone')->nullable();
+            $table->string('street')->nullable();
+            $table->string('city')->nullable();
+            $table->string('province')->nullable();
+            $table->string('zipcode')->nullable();
             $table->string('password');
             $table->string('password_confirmation');
             $table->rememberToken();

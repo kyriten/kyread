@@ -19,7 +19,12 @@ class UserController extends Controller
         $rules = [
             'fullname' => 'max:30',
             'nickname' => 'max:12',
-            'about' => 'max:30'
+            'about' => 'max:30',
+            'street' => 'required|max:130',
+            'city' => 'required|max:32',
+            'province' => 'required|max:14',
+            'zipcode' => 'required|max:5'
+
         ];
 
         if ($request->username != $user->username) {
@@ -41,4 +46,5 @@ class UserController extends Controller
         $request->session()->flash('success', 'Your data has been updated.');
         return redirect('/edit-profile');
     }
+
 }

@@ -29,6 +29,10 @@
                                     <a class="nav-link cart" href="/cart"><i
                                             class="fa-solid fa-cart-shopping fa-xl"></i></a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link cart" href="/cart"><i
+                                            class="fa-solid fa-cart-shopping fa-xl"></i></a>
+                                </li>
                                 <li class="nav-item dropdown ms-4 mx-auto">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
                                         role="button" aria-expanded="false">
