@@ -13,12 +13,12 @@ A mini e-marketplace for bookstore. So here are the specifications of the applic
   
   Do this for access this project at your computer:
 
-## 1. Add vendor <br>
+### 1. Add vendor <br>
 Just run this command in your project without tick(') symbol: 
 <br>
 'composer install'
 
-## 2. Add .env file
+### 2. Add .env file
 <ol>
   <li>Download the standard env.example file from the Laravel source code.</li>
 <li>Rename it to .env and edit it.</li>
@@ -27,6 +27,7 @@ Just run this command in your project without tick(') symbol:
 <li>It will generate an application (encryption) key and add it to the .env file.</li>
 </ol>
 
+### 3. Migrate
 Don't forget to migrate your database.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
