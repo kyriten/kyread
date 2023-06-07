@@ -3,7 +3,7 @@
         <div class="container">
             <div class="container-fluid">
                 <div class="row d-flex align-items-center justify-content-between">
-                    <div class="col-lg-2">
+                    <div class="col-4 col-lg-2">
                         <a class="navbar-brand" href="/home">
                             {{ config('app.name') }}
                         </a>
@@ -17,7 +17,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="col col-lg-2">
+                    <div class="col-2">
                         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                             type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -26,19 +26,19 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
+                                    <a class="nav-link" href="/pos"><i class="fa-solid fa-store fa-xl"
+                                            style="color: #43aaff;"></i></a>
+                                </li>
+                                <li class="nav-item me-2">
                                     <a class="nav-link cart" href="/cart"><i
                                             class="fa-solid fa-cart-shopping fa-xl"></i></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link cart" href="/cart"><i
-                                            class="fa-solid fa-cart-shopping fa-xl"></i></a>
-                                </li>
-                                <li class="nav-item dropdown ms-4 mx-auto">
+                                <li class="nav-item dropdown mx-auto">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
                                         role="button" aria-expanded="false">
                                         <i class="fa-solid fa-user fa-xl" id="profile-btn"></i>
-                                        <label class="ms-2 user-name"
-                                            for="profile-btn">{{ auth()->user()->username }}</label>
+                                        <label class="ms-2 user-name fw-bold" for="profile-btn"
+                                            style="font-size: 16px">{{ auth()->user()->username }}</label>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end"
                                         aria-labelledby="navbarDropdownMenuLink">
@@ -78,6 +78,7 @@
                                                 @csrf
                                                 <button class="dropdown-item" type="submit">Edit Profile</button>
                                             </form>
+                                        </li>
                                         <li>
                                             <form action="/logout" method="POST">
                                                 @csrf

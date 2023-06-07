@@ -26,7 +26,9 @@ use App\Http\Controllers\RegisterController;
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth');
 Route::get('/edit-profile', [UserController::class, 'edit'])->name('profile');
 Route::put('/update-profile/{user}', [UserController::class, 'update'])->name('profile.update');
+Route::delete('/delete-profile/{user}', [UserController::class, 'destroy'])->name('profile.delete');
 Route::get('/cart', [CartController::class, 'index']);
+Route::get('/dashboard', [PosController::class, 'index']);
 
 Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);

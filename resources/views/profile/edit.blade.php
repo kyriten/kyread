@@ -37,11 +37,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="d-block text-center mt-3">
+                    <form action="{{ route('profile.delete', auth()->user()->id) }}" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        Want to remove your account?
+                        <button class="btn btn-danger fw-bold text-light mt-2" id="delete" type="submit"
+                            onclick="return confirm('Are you sure to remove your account?')">{{ __('REMOVE') }}</button>
+                    </form>
+                </div>
             </div>
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="card edit-profile">
                     <div class="card-body">
-                        <form action="{{ route('profile.update', auth()->user()->id) }}}}" method="POST">
+                        <form action="{{ route('profile.update', auth()->user()->id) }}" method="POST">
                             @csrf
 
                             @method('PUT')
