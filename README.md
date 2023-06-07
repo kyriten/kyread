@@ -1,4 +1,4 @@
-# kyread
+# Manual Guide to Fork Repo
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
 <ol>
