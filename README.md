@@ -1,3 +1,5 @@
+<p align="center"><a href="https://github.com/kyriten/kyread"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="kyread Logo"></a></p>
+
 # Manual Guide to Fork Repo
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
