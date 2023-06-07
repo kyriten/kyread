@@ -13,12 +13,12 @@ A mini e-marketplace for bookstore. So here are the specifications of the applic
   
   Do this for access this project at your computer:
 
-##1. Add vendor <br>
+## 1. Add vendor <br>
 Just run this command in your project without tick(') symbol: 
 <br>
 'composer install'
 
-##2. Add .env file
+## 2. Add .env file
 <ol>
   <li>Download the standard env.example file from the Laravel source code.</li>
 <li>Rename it to .env and edit it.</li>
