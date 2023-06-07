@@ -15,8 +15,7 @@
                         <div class="account-settings">
                             <div class="user-profile">
                                 <div class="user-avatar img-fluid">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                                        alt="Abimanyu Okysaputra Rachman">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
                                 </div>
                                 <h5 class="user-name">
                                     @if (auth()->user()->fullname === null)
