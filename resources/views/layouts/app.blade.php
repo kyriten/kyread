@@ -17,6 +17,10 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Template POS CSS File -->
     <link href="pos/assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="pos/assets/img/brand.svg" rel="icon">
+    <link href="pos/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 
 <body>
