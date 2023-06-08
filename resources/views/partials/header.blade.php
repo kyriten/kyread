@@ -4,8 +4,9 @@
             <div class="container-fluid">
                 <div class="row d-flex align-items-center justify-content-between">
                     <div class="col-4 col-lg-2">
-                        <a class="navbar-brand" href="/home">
-                            {{ config('app.name') }}
+                        <a class="logo navbar-brand" href="/home">
+                            <img src="pos/assets/img/brand.svg" alt="">
+                            <span>{{ config('app.name') }}</span>
                         </a>
                     </div>
                     <div class="col-6 col-lg-6">
@@ -26,17 +27,17 @@
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/pos"><i class="fa-solid fa-store fa-xl"
+                                    <a class="nav-link" href="/dashboard"><i class="fa-solid fa-store fa-lg"
                                             style="color: #43aaff;"></i></a>
                                 </li>
                                 <li class="nav-item me-2">
                                     <a class="nav-link cart" href="/cart"><i
-                                            class="fa-solid fa-cart-shopping fa-xl"></i></a>
+                                            class="fa-solid fa-cart-shopping fa-lg"></i></a>
                                 </li>
                                 <li class="nav-item dropdown mx-auto">
                                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
                                         role="button" aria-expanded="false">
-                                        <i class="fa-solid fa-user fa-xl" id="profile-btn"></i>
+                                        <i class="fa-solid fa-user fa-lg" id="profile-btn"></i>
                                         <label class="ms-2 user-name fw-bold" for="profile-btn"
                                             style="font-size: 16px">{{ auth()->user()->username }}</label>
                                     </a>
@@ -76,14 +77,18 @@
                                         <li>
                                             <form action="/edit-profile" method="GET">
                                                 @csrf
-                                                <button class="dropdown-item" type="submit">Edit Profile</button>
+                                                <button class="dropdown-item" type="submit"><i
+                                                        class="fa-solid fa-pen-to-square fa-lg me-3"
+                                                        style="color: #43aaff;"></i>Edit
+                                                    Profile</button>
                                             </form>
                                         </li>
                                         <li>
                                             <form action="/logout" method="POST">
                                                 @csrf
-                                                <button class="dropdown-item" type="submit"
-                                                    onclick="logout()">Logout</button>
+                                                <button class="dropdown-item" type="submit" onclick="logout()"><i
+                                                        class="fa-solid fa-right-from-bracket fa-lg me-3 mb-3"
+                                                        style="color: #43aaff;"></i>Logout</button>
                                             </form>
                                         </li>
                                     </ul>

@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,500;1,700;1,800&display=swap"
         rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Template POS CSS File -->
+    <link href="pos/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
