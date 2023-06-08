@@ -101,47 +101,50 @@
     <h5 class="fw-semibold mt-4">RECOMMENDATIONS</h5>
     {{-- Row 1 --}}
     <div class="d-flex justify-content-between d-block text-center mt-3">
-        <div class="">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/00.00 Karya Ameylia Falensia.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    00.00 Karya Ameylia Falensia
-                    <span class="badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="row mt-auto mb-3">
+        <div class="card" style="width: 240px; height: 360px">
+            <div class="image-wrapper">
+                <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                    src="{{ asset('img/recommendations/00.00 Karya Ameylia Falensia.jpg') }}" alt=""
+                    style="height: 220px; width: 70%" />
+            </div>
+            <h5 class="card-title fs-6 px-3">
+                00.00 Karya Ameylia Falensia
+                <span class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
+            </h5>
+            <div class="card-footer mb-3 border-0">
+                <div class="row mt-auto">
                     <div class="col">
                         <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
                             style="color: rgb(67, 170, 255)">73.000</big>
                     </div>
-                    <div class="col-md-auto me-4">
+                    <div class="col-md-auto me-3">
                         <small>3,8RB Terjual</small>
                     </div>
                 </div>
-                <a class="stretched-link" href="#"></a>
             </div>
+            <a class="stretched-link" href="#"></a>
         </div>
         <div class="ms-3">
             <div class="card" style="width: 240px; height: 360px">
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Yang Bertahan dan Binasa Perlahan.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title ms-2 me-2 fs-6 px-3">
-                    Yang Bertahan dan Binasa Perlahan
-                    <span class="badge bg-primary text-light">Novel</span>
+                    Yang Bertahan dan ...
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -152,19 +155,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Selamat Tinggal.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Selamat Tinggal
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -175,19 +181,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Black Showman dan Pembunuhan di Kota Tak Bernama.jpg') }}"
-                        alt="" style="height: 90%; width: 70%" />
+                        alt="" style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Dikta & Hukum
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -198,19 +207,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Cantik Itu Luka.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Cantik Itu Luka
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -220,47 +232,50 @@
 
     {{-- Row 2 --}}
     <div class="d-flex justify-content-between text-center mt-3">
-        <div class="">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/Di Tanah Lada.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    Di Tanah Lada
-                    <span class="badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="row mt-auto mb-3">
+        <div class="card" style="width: 240px; height: 360px">
+            <div class="image-wrapper">
+                <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                    src="{{ asset('img/recommendations/Di Tanah Lada.jpg') }}" alt=""
+                    style="height: 220px; width: 70%" />
+            </div>
+            <h5 class="card-title mt-2 fs-6 px-3">
+                Di Tanah Lada
+                <span class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
+            </h5>
+            <div class="card-footer mb-3 border-0">
+                <div class="row mt-auto">
                     <div class="col">
                         <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
                             style="color: rgb(67, 170, 255)">73.000</big>
                     </div>
-                    <div class="col-md-auto me-4">
+                    <div class="col-md-auto me-3">
                         <small>3,8RB Terjual</small>
                     </div>
                 </div>
-                <a class="stretched-link" href="#"></a>
             </div>
+            <a class="stretched-link" href="#"></a>
         </div>
         <div class="ms-3">
             <div class="card" style="width: 240px; height: 360px">
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Fur Immer Dein Ian.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Fur Immer Dein Ian
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -271,19 +286,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Harry Potter and The Philosopher’s Stone.jpg') }}"
-                        alt="" style="height: 90%; width: 70%" />
+                        alt="" style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Harry Potter
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -294,19 +312,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Heartbreak Motel.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Heartbreak Motel
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -317,19 +338,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/I Think I Love You - Cha Mirae.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     I Think I Love You - Cha Mirae
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -339,47 +363,50 @@
 
     {{-- Row 3 --}}
     <div class="d-flex justify-content-between text-center mt-3">
-        <div class="">
-            <div class="card" style="width: 240px; height: 360px">
-                <div class="image-wrapper">
-                    <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
-                        src="{{ asset('img/recommendations/Kita Pergi Hari Ini.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
-                </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
-                    Kita Pergi Hari Ini
-                    <span class="badge bg-primary text-light">Novel</span>
-                </h5>
-                <div class="row mt-auto mb-3">
+        <div class="card" style="width: 240px; height: 360px">
+            <div class="image-wrapper">
+                <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                    src="{{ asset('img/recommendations/Kita Pergi Hari Ini.jpg') }}" alt=""
+                    style="height: 220px; width: 70%" />
+            </div>
+            <h5 class="card-title mt-2 fs-6 px-3">
+                Kita Pergi Hari Ini
+                <span class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
+            </h5>
+            <div class="card-footer mb-3 border-0">
+                <div class="row mt-auto">
                     <div class="col">
                         <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
                             style="color: rgb(67, 170, 255)">73.000</big>
                     </div>
-                    <div class="col-md-auto me-4">
+                    <div class="col-md-auto me-3">
                         <small>3,8RB Terjual</small>
                     </div>
                 </div>
-                <a class="stretched-link" href="#"></a>
             </div>
+            <a class="stretched-link" href="#"></a>
         </div>
         <div class="ms-3">
             <div class="card" style="width: 240px; height: 360px">
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Moon atau Bulan.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Moon atau Bulan
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -390,19 +417,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Perpustakaan Tengah Malam.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
-                <h5 class="card-title mt-2 fs-6 px-3">
+                <h5 class="card-title mt-2 me-2 fs-6 px-3">
                     Perpustakaan Tengah Malam
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -413,19 +443,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/Twenty Four Eyes.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
                     Twenty Four Eyes
-                    <span class="badge bg-primary text-light">Novel</span>
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
@@ -436,19 +469,22 @@
                 <div class="image-wrapper">
                     <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                         src="{{ asset('img/recommendations/ramai yang dulu kita bawa pergi.jpg') }}" alt=""
-                        style="height: 90%; width: 70%" />
+                        style="height: 220px; width: 70%" />
                 </div>
                 <h5 class="card-title mt-2 fs-6 px-3">
-                    Ramai Yang Dulu Kita Bawa Pergi
-                    <span class="badge bg-primary text-light">Novel</span>
+                    Ramai Yang Dulu Kita ...
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
                 </h5>
-                <div class="row mt-auto mb-3">
-                    <div class="col">
-                        <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
-                            style="color: rgb(67, 170, 255)">73.000</big>
-                    </div>
-                    <div class="col-md-auto me-4">
-                        <small>3,8RB Terjual</small>
+                <div class="card-footer mb-3 border-0">
+                    <div class="row mt-auto">
+                        <div class="col">
+                            <small style="color: rgb(67, 170, 255)">Rp</small><big class="me-1"
+                                style="color: rgb(67, 170, 255)">73.000</big>
+                        </div>
+                        <div class="col-md-auto me-3">
+                            <small>3,8RB Terjual</small>
+                        </div>
                     </div>
                 </div>
                 <a class="stretched-link" href="#"></a>
