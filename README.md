@@ -52,6 +52,6 @@ Create database name 'db_kyread' it's possible to custom with yours, but equate 
 Don't forget to migrate your database.
 
 
-## License
+## 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p alig="center"> The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).</p>
