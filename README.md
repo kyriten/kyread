@@ -1,4 +1,4 @@
-<table border="none">
+<table align="center" border="none">
  <tr>
     <td>
         <p align="center"><a href="https://github.com/kyriten/kyread"><img src="https://raw.githubusercontent.com/kyriten/kyread/master/kyread-logo.svg" width="400" alt="kyread Logo"></a></p>         </td>
