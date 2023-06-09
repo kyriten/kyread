@@ -10,7 +10,8 @@ A mini e-marketplace for bookstore. So here are the specifications of the applic
 <li>Laravel Version: 10.13.0</li>
 <li>Laravel Version: 10.13.0</li>
 <li>Bootstrap Version: 5.3.0</li>
-  <li>MDB Version: 6.3.1</li>
+<li>MDB Version: 6.3.1</li>
+<li>Dashboard Template: <a href="https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/">NiceAdmin by Bootstrapmade (May 30, 2023)</a></li>
 </ol>
   
   Do this for access this project at your computer:
