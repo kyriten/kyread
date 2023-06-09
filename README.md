@@ -16,7 +16,7 @@
 
 
 
-## Manual Guide to Fork Repo
+## Manual Guide to Fork This Repo
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
 <ol>
