@@ -1,15 +1,15 @@
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="header-nav navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
             <div class="container-fluid">
-                <div class="row d-flex align-items-center justify-content-between">
-                    <div class="col-4 col-lg-2">
+                <div class="row d-flex align-items-center justify-content-between gap-5">
+                    <div class="col">
                         <a class="logo navbar-brand" href="/home">
                             <img src="pos/assets/img/brand.svg" alt="">
                             <span>{{ config('app.name') }}</span>
                         </a>
                     </div>
-                    <div class="col-6 col-lg-6">
+                    <div class="col col-lg-6">
                         <div class="input-group rounded">
                             <input class="form-control rounded" type="search" aria-label="Search"
                                 aria-describedby="search-addon" placeholder="Search" />
@@ -18,7 +18,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col">
                         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                             type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -26,24 +26,27 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
+                                <li class="nav-item me-2 nav-icon">
                                     <a class="nav-link" href="/dashboard"><i class="fa-solid fa-store fa-lg"
                                             style="color: #43aaff;"></i></a>
                                 </li>
-                                <li class="nav-item me-2">
+                                <li class="nav-item me-2 nav-icon me-auto">
                                     <a class="nav-link cart" href="/cart"><i
                                             class="fa-solid fa-cart-shopping fa-lg"></i></a>
                                 </li>
+
+                                <div class="vr border-2"></div>
                                 <li class="nav-item dropdown mx-auto">
-                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                                        role="button" aria-expanded="false">
-                                        <i class="fa-solid fa-user fa-lg" id="profile-btn"></i>
-                                        <label class="ms-2 user-name fw-bold" for="profile-btn"
-                                            style="font-size: 16px">{{ auth()->user()->username }}</label>
+                                    <a class="nav-link nav-profile d-flex align-items-center pe-0"
+                                        data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                        <img class="rounded-circle"
+                                            src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Profile">
+                                        <span class="d-none d-md-block ps-2 user-name fw-bold" for="profile-btn"
+                                            style="font-size: 16px">{{ auth()->user()->username }}</span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end"
                                         aria-labelledby="navbarDropdownMenuLink">
-                                        <div class="container d-flex justify-content-center mb-3">
+                                        <div class="container d-flex justify-content-center">
                                             <div class="card profile-area shadow-none">
                                                 <div class="top-container mt-3">
                                                     <img class="img-fluid profile-image"
@@ -66,7 +69,7 @@
                                                                 style="color: #43aaff;"></i>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex flex-column text-start ms-2 me-2">
+                                                    <div class="d-flex flex-column text-start ms-2">
                                                         <span class="current-balance">Current Balance</span>
                                                         <span class="amount"><span
                                                                 class="dollar-sign">Rp</span>188511563</span>
