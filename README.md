@@ -10,7 +10,7 @@ A mini e-marketplace for bookstore. So here are the specifications of the applic
 <li>Laravel Version: 10.13.0</li>
 <li>Bootstrap Version: 5.3.0</li>
 <li>MDB Version: 6.3.1</li>
-<li>Dashboard Template: <a href="https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/">NiceAdmin by Bootstrapmade (May 30, 2023)</a></li>
+<li>Dashboard Template: <a href="https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/">NiceAdmin by Bootstrapmade (Last updated: May 30, 2023)</a></li>
 </ol>
   
   Do this for access this project at your computer:
@@ -22,7 +22,7 @@ Just run this command in your project without tick(') symbol:
 
 ### 2. Add .env file
 <ol>
-  <li>Download the standard env.example file from the Laravel source code.</li>
+<li>Download the standard env.example file from the Laravel source code.</li>
 <li>Rename it to .env and edit it.</li>
 <li>Just set up correct DB credentials, etc.</li>
 <li>Don't forget to run the php artisan key:generate command.</li>
