@@ -54,4 +54,4 @@ Don't forget to migrate your database.
 
 ## 
 
-<p alig="center"> The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).</p>
+<p align="center"> The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).</p>
