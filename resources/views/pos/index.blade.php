@@ -44,6 +44,11 @@
     @include('pos.topbar')
     @yield('dashboard')
     @yield('products')
+    @yield('addproduct')
+    @yield('editproduct')
+    @yield('store')
+    @yield('faq')
+    @yield('contact')
     @include('partials.footer')
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
@@ -60,6 +65,26 @@
 
     <!-- Template Main JS File -->
     <script src="pos/assets/js/main.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+        function logout() {
+
+            swal({
+
+                title: "Logout Succeed!",
+
+                text: "You have exited the app.",
+
+                icon: "success",
+
+                button: true
+
+            });
+
+        }
+    </script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@
             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
                 <div class="card edit-profile">
                     <div class="card-body">
-                        <div class="account-settings">
+                        <div class="account-settings mt-4">
                             <div class="user-profile">
                                 <div class="user-avatar img-fluid">
                                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
@@ -49,7 +49,7 @@
             </div>
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="card edit-profile">
-                    <div class="card-body">
+                    <div class="card-body mt-4">
                         <form action="{{ route('profile.update', auth()->user()->id) }}" method="POST">
                             @csrf
 
@@ -210,7 +210,7 @@
                                         <button class="btn btn-secondary fw-bold text-primary" id="reset"
                                             type="reset">{{ __('RESET') }}</button>
                                         <button class="btn btn-primary fw-bold text-light" id="submit"
-                                            type="submit">{{ __('SUBMIT') }}</button>
+                                            type="submit">{{ __('SAVE') }}</button>
                                     </div>
                                 </div>
                             </div>
