@@ -42,6 +42,7 @@
 <body>
     @include('pos.sidebar')
     @include('pos.topbar')
+
     @yield('dashboard')
     @yield('products')
     @yield('addproduct')
@@ -49,6 +50,9 @@
     @yield('store')
     @yield('faq')
     @yield('contact')
+    @yield('transaction')
+    @yield('featurelocked')
+
     @include('partials.footer')
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>

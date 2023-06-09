@@ -54,6 +54,8 @@ Route::post('/logout-shop', [PosController::class, 'logoutshop']);
 Route::get('/faq', [PosController::class, 'faq']);
 Route::get('/contact', [PosController::class, 'contact']);
 Route::get('/store-profile', [PosController::class, 'stall']);
+Route::get('/transaction', [PosController::class, 'transaction']);
+Route::get('/feature-locked', [PosController::class, 'locked']);
 
 //POS Access Routes
 // Route::get('/shop-register', [PosController::class, 'index'])->name('shop-register')->middleware('guest');

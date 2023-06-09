@@ -69,6 +69,20 @@ class PosController extends Controller
         ]);
     }
 
+    public function transaction()
+    {
+        return view('pos.pages.transaction',[
+            'title' => 'Store Profile',
+        ]);
+    }
+
+    public function locked()
+    {
+        return view('pos.pages.featurelocked',[
+            'title' => 'Feature is Locked',
+        ]);
+    }
+
     public function logoutshop()
     {
         return redirect ('/home');
