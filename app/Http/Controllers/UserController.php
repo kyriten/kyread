@@ -47,4 +47,8 @@ class UserController extends Controller
         return redirect('/edit-profile');
     }
 
+    public function destroy(User $user){
+        User::destroy($user->id);
+        return redirect('/')->with('success', 'Your account has been removed!');
+    }
 }
