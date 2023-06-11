@@ -45,9 +45,11 @@
         </li><!-- End Profile Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/store-profile">
+            <a class="nav-link collapsed" data-bs-toggle="tooltip" data-bs-placement="right"
+                data-bs-title="Feature Locked" href="/feature-locked">
                 <i class="bi bi-shop"></i>
                 <span>Profile</span>
+                <i class="bi bi-lock"></i>
             </a>
         </li><!-- End Profile Page Nav -->
 
