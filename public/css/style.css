@@ -1,75 +1,75 @@
-body{
-    font-family: 'Barlow', sans-serif;
+body {
+    font-family: "Barlow", sans-serif;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: rgb(67, 170, 255);
-    font-family: 'Barlow', sans-serif;
+    font-family: "Barlow", sans-serif;
     font-size: 34px;
     font-weight: 550;
     font-style: italic;
 }
-#promo-banner{
-    height: 370px
+#promo-banner {
+    height: 370px;
 }
-.list-group-item{
-    padding: 2rem
+.list-group-item {
+    padding: 2rem;
 }
-.cart{
-    color: rgb(67, 170, 255)
+.cart {
+    color: rgb(67, 170, 255);
 }
 
-#profile-btn{
-    color: rgb(67, 170, 255)
+#profile-btn {
+    color: rgb(67, 170, 255);
 }
-.user-name{
-    font-family: 'Barlow', sans-serif;
+.user-name {
+    font-family: "Barlow", sans-serif;
     font-size: small;
 }
-.profile-area{
-	width: 200px;
+.profile-area {
+    width: 200px;
     border: none;
 }
-.top-container{
-	display: flex;
-	align-items: center;
+.top-container {
+    display: flex;
+    align-items: center;
 }
-.profile-image{
-	border-radius: 10px;
-	border: 2px solid rgb(67, 170, 255);
+.profile-image {
+    border-radius: 10px;
+    border: 2px solid rgb(67, 170, 255);
 }
-.name{
-	font-size: 15px;
-	font-weight: bold;
-	color: #272727;
+.name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #272727;
 }
-.middle-container{
-	border-radius: 12px;
+.middle-container {
+    border-radius: 12px;
     background-color: #eee;
 }
 .middle-container:hover {
-	border: 1px solid rgb(67, 170, 255);
+    border: 1px solid rgb(67, 170, 255);
 }
-.dollar-div{
-	background-color: rgb(67, 170, 255);
-	padding: 12px;
-	border-radius: 10px;
+.dollar-div {
+    background-color: rgb(67, 170, 255);
+    padding: 12px;
+    border-radius: 10px;
 }
 
-.current-balance{
-	font-size: 12px;
-	color: #272727;
-	font-weight: bold;
+.current-balance {
+    font-size: 12px;
+    color: #272727;
+    font-weight: bold;
 }
-.amount{
-	color: rgb(67, 170, 255);
-	font-size: 13px;
-	font-weight: bold;
+.amount {
+    color: rgb(67, 170, 255);
+    font-size: 13px;
+    font-weight: bold;
 }
-.currency-sign{
-	font-size: 13px;
-	color: #272727;
-	font-weight: bold;
+.currency-sign {
+    font-size: 13px;
+    color: #272727;
+    font-weight: bold;
 }
 .account-settings .user-profile {
     margin: 0 0 1rem 0;
@@ -111,7 +111,7 @@ body{
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    font-size: .825rem;
+    font-size: 0.825rem;
     background: #ffffff;
     color: #2e323c;
 }
