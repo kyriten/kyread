@@ -16,16 +16,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,500;1,700;1,800&display=swap"
         rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="pos/assets/img/brand.svg" rel="icon">
+    <link href="pos/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 
 <body class="bg-primary bg-opacity-25">
-    <div class="row justify-content-center">
-        <div class="col-md-3 position-absolute top-50 start-50 translate-middle">
-            <a class="navbar-brand justify-content-center mb-3" href="/">
-                <h3 class="text-dark fw-semibold me-2">WELCOME TO</h3>
-                {{ config('app.name') }}
-            </a>
-            @yield('formLogin')
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 position-absolute top-50 start-50 translate-middle">
+                    @yield('formRegister')
+                    @yield('formLogin')
+                </div>
+            </div>
         </div>
     </div>
 

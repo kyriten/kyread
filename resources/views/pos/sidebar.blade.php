@@ -70,7 +70,7 @@
         </li><!-- End F.A.Q Page Nav -->
 
         <li class="nav-item">
-            <form action="/logout-shop" method="POST">
+            <form action="/shop-logout" method="POST">
                 @csrf
                 <button class="nav-link collapsed" type="submit" onclick="logout()"><i
                         class="bi bi-box-arrow-right"></i><span>Logout</span></button>

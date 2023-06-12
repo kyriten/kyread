@@ -26,7 +26,7 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Image</th>
-                                        <th scope="col">Item Name</th>
+                                        <th scope="col">Name</th>
                                         <th scope="col">Category</th>
                                         <th scope="col">Stock</th>
                                         <th scope="col">Items Sold</th>
@@ -35,56 +35,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Image</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>Designer</td>
-                                        <td>28</td>
-                                        <td>28</td>
-                                        <td>2016-05-25</td>
-                                        <td>2016-05-25</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Image</td>
-                                        <td>Bridie Kessler</td>
-                                        <td>Developer</td>
-                                        <td>35</td>
-                                        <td>28</td>
-                                        <td>2014-12-05</td>
-                                        <td>2014-12-05</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Image</td>
-                                        <td>Ashleigh Langosh</td>
-                                        <td>Finance</td>
-                                        <td>45</td>
-                                        <td>28</td>
-                                        <td>2011-08-12</td>
-                                        <td>2011-08-12</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Image</td>
-                                        <td>Angus Grady</td>
-                                        <td>HR</td>
-                                        <td>34</td>
-                                        <td>28</td>
-                                        <td>2012-06-11</td>
-                                        <td>2012-06-11</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>Image</td>
-                                        <td>Raheem Lehner</td>
-                                        <td>Dynamic Division Officer</td>
-                                        <td>47</td>
-                                        <td>28</td>
-                                        <td>2011-04-19</td>
-                                        <td>2011-04-19</td>
-                                    </tr>
+                                    @foreach ($products as $item)
+                                        <tr>
+                                            <th scope="row">{{ $item->id }}</th>
+                                            <td>{{ $item->image }}</td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>{{ $item->category->name }}</td>
+                                            <td>{{ $item->stock }}</td>
+                                            <td>{{ $item->sold }}</td>
+                                            <td>{{ $item->sale_date }}</td>
+                                            <td>{{ $item->stock_update }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                             <!-- End Table with stripped rows -->

@@ -20,16 +20,16 @@
         <ul class="d-flex align-items-center">
 
             <li class="nav-item d-block d-lg-none">
-                <a class="nav-link nav-icon search-bar-toggle " href="#">
+                <a class="nav-link nav-icon search-bar-toggle" href="#">
                     <i class="bi bi-search"></i>
                 </a>
             </li><!-- End Search Icon-->
 
             <li class="nav-item dropdown">
 
-                <a class="nav-link nav-icon" data-bs-toggle="dropdown" href="#">
+                <a class="nav-link nav-icon disabled link-secondary" data-bs-toggle="dropdown" href="#">
                     <i class="bi bi-bell"></i>
-                    <span class="badge bg-primary badge-number">4</span>
+                    <span class="badge bg-primary badge-number"><i class="bi bi-lock"></i></span>
                 </a><!-- End Notification Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
@@ -104,9 +104,9 @@
 
             <li class="nav-item dropdown">
 
-                <a class="nav-link nav-icon" data-bs-toggle="dropdown" href="#">
+                <a class="nav-link nav-icon disabled link-secondary" data-bs-toggle="dropdown" href="#">
                     <i class="bi bi-chat-left-text"></i>
-                    <span class="badge bg-success badge-number">3</span>
+                    <span class="badge bg-success badge-number"><i class="bi bi-lock"></i></span>
                 </a><!-- End Messages Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
@@ -178,19 +178,23 @@
                 </a><!-- End Profile Iamge Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                    <li class="dropdown-header">
-                        <h6>{{ auth()->user()->fullname }}</h6>
-                        {{-- <span>{{ auth()->user()->namatoko }} Admin</span> --}}
-                        <span>Bibliophile Store Admin</span>
-                    </li>
+                    {{-- @foreach ($pos as $item) --}}
+                    {{-- <li class="dropdown-header">
+                            <h6>{{ auth()->user()->fullname }}</h6> --}}
+                    {{-- <span>{{ auth()->user()->namatoko }} Admin</span> --}}
+                    {{-- <span> {{ $item->name }} Admin</span>
+                        </li> --}}
+                    {{-- @endforeach --}}
+
                     <li>
                         <hr class="dropdown-divider">
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="/store-profile">
+                        <a class="dropdown-item d-flex align-items-center" href="/feature-locked">
                             <i class="bi bi-gear"></i>
                             <span>Account Settings</span>
+                            <i class="bi bi-lock"></i>
                         </a>
                     </li>
                     <li>
@@ -208,7 +212,7 @@
                     </li>
 
                     <li>
-                        <form action="/logout-shop" method="POST">
+                        <form action="/shop-logout" method="POST">
                             @csrf
                             <button class="dropdown-item d-flex align-items-center" type="submit"
                                 onclick="logout()"><i class="bi bi-box-arrow-right"></i>Logout</button>
