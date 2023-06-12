@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,16 +51,19 @@ Route::get('/dashboard', [PosController::class, 'dashboard']);
 Route::get('/products', [PosController::class, 'products']);
 Route::get('/add-product', [PosController::class, 'addproduct']);
 Route::get('/edit-product', [PosController::class, 'editproduct']);
-Route::post('/logout-shop', [PosController::class, 'logoutshop']);
 Route::get('/faq', [PosController::class, 'faq']);
 Route::get('/contact', [PosController::class, 'contact']);
-Route::get('/store-profile', [PosController::class, 'stall']);
+Route::get('/store-profile', [PosController::class, 'storeprofile']);
 Route::get('/transaction', [PosController::class, 'transaction']);
 Route::get('/feature-locked', [PosController::class, 'locked']);
 
 //POS Access Routes
-// Route::get('/shop-register', [PosController::class, 'index'])->name('shop-register')->middleware('guest');
-// Route::post('/shop-register', [PosController::class, 'addshop']);
-
-// Route::get('/shop-login', [PosController::class, 'index'])->name('login')->middleware('guest');
+// Route::get('/shop-register', [PosController::class, 'createRegister']);
+// Route::post('/shop-register', [PosController::class, 'store']);
+// Route::get('/shop-login', [PosController::class, 'createLogin']);
 // Route::post('/shop-login', [PosController::class, 'authenticate']);
+Route::post('/shop-logout', [LoginController::class, 'shoplogout']);
+
+// Route::get('products/checkSlug', [ProductController::class, 'checkSlug']);
+Route::get('/image', [ImageController::class, 'index'])->name('image.index');
+Route::post('/image', [ImageController::class, 'store'])->name('image.store');
