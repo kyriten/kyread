@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,500;1,700;1,800&display=swap"
         rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <link href="pos/assets/img/brand.svg" rel="icon">
+    <link href="pos/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 
 <body class="bg-primary bg-opacity-25">

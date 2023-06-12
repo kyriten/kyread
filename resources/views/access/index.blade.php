@@ -57,7 +57,7 @@
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                         <input class="form-control @error('login_email') is-invalid @enderror" id="loginName"
-                            name="login_email" type="text" value="{{ old('login_email') }}" required />
+                            name="login_email" type="email" value="{{ old('login_email') }}" required />
                         <label class="form-label" for="loginName">Email</label>
                         @error('login_email')
                             <div class="invalid-feedback">
@@ -90,7 +90,7 @@
 
                     <!-- Submit button -->
                     <button class="btn btn-primary btn-block mb-3 fw-bold text-light"
-                        type="submit">{{ __('LOGIn') }}</button>
+                        type="submit">{{ __('LOGIN') }}</button>
                 </form>
             </div>
             <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">

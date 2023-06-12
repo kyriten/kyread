@@ -21,13 +21,14 @@
     <!-- Favicons -->
     <link href="pos/assets/img/brand.svg" rel="icon">
     <link href="pos/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="pos/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- HEADER -->
-    <div class="main-wrapper">
-        @include('partials.header')
-    </div>
+    @include('partials.header')
     <!-- MAIN CONTENT -->
     <div class="container mt-4 mb-3 bg-white text-dark">
         <div class="container-fluid">
