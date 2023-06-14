@@ -16,7 +16,7 @@
 
 
 
-## APP DESCRIPTION
+## APP SPECIFICATIONS
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
 <ol>
