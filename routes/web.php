@@ -48,9 +48,15 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 //POS Pages Routes
 Route::get('/dashboard', [PosController::class, 'dashboard']);
-Route::get('/products', [PosController::class, 'products']);
+// Route::get('/products', [PosController::class, 'index']);
 Route::get('/add-product', [PosController::class, 'addproduct']);
-Route::get('/edit-product', [PosController::class, 'editproduct']);
+Route::post('/add-product', [PosController::class, 'storeproduct']);
+// Route::resource('/products', PosController::class);
+// Route::get('/delete-product/{id}', [PosController::class, 'destroy'])->name('products.destroy');
+// Route::get('/products/{id}', [PosController::class, 'edit']);
+// Route::put('/update-product/{id}', [PosController::class, 'update']);
+Route::resource('/products', PosController::class);
+// Route::put('/update-product/{id}', [PosController::class, 'updateproduct'])->name('products.update');
 Route::get('/faq', [PosController::class, 'faq']);
 Route::get('/contact', [PosController::class, 'contact']);
 Route::get('/store-profile', [PosController::class, 'storeprofile']);
@@ -62,7 +68,7 @@ Route::get('/feature-locked', [PosController::class, 'locked']);
 // Route::post('/shop-register', [PosController::class, 'store']);
 // Route::get('/shop-login', [PosController::class, 'createLogin']);
 // Route::post('/shop-login', [PosController::class, 'authenticate']);
-Route::post('/shop-logout', [LoginController::class, 'shoplogout']);
+// Route::post('/shop-logout', [PosController::class, 'shoplogout']);
 
 // Route::get('products/checkSlug', [ProductController::class, 'checkSlug']);
 Route::get('/image', [ImageController::class, 'index'])->name('image.index');
