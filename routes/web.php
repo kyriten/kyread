@@ -48,15 +48,9 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 //POS Pages Routes
 Route::get('/dashboard', [PosController::class, 'dashboard']);
-// Route::get('/products', [PosController::class, 'index']);
 Route::get('/add-product', [PosController::class, 'addproduct']);
 Route::post('/add-product', [PosController::class, 'storeproduct']);
-// Route::resource('/products', PosController::class);
-// Route::get('/delete-product/{id}', [PosController::class, 'destroy'])->name('products.destroy');
-// Route::get('/products/{id}', [PosController::class, 'edit']);
-// Route::put('/update-product/{id}', [PosController::class, 'update']);
 Route::resource('/products', PosController::class);
-// Route::put('/update-product/{id}', [PosController::class, 'updateproduct'])->name('products.update');
 Route::get('/faq', [PosController::class, 'faq']);
 Route::get('/contact', [PosController::class, 'contact']);
 Route::get('/store-profile', [PosController::class, 'storeprofile']);
