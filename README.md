@@ -29,6 +29,24 @@ A mini e-marketplace for bookstore. So here are the specifications of the applic
 <li>Dashboard Template: <a href="https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/">NiceAdmin by Bootstrapmade (Last updated: May 30, 2023)</a></li>
 </ol>
 
+## FEATURES
+<ol>
+<li>User Authentication</li>
+<li>Edit User Profile</li>
+<li>Add Product</li>
+<li>Show Product</li>
+<li>Edit and Update Product</li>
+<li>Delete Product</li>
+<li>Convenient Use</li>
+</ol>
+
+### Next Task
+<ol>
+<li>Image CRUD</li>
+<li>[kyreadSeller] Add Field: category, sale_date, delivery_method, update_stock</li>
+<li>[kyreadSeller] Add Transaction</li>
+</ol>
+
 ## LOCAL INSTALLATION
   Do this for access this project at your computer:
 
