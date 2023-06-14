@@ -16,7 +16,7 @@
 
 
 
-## Manual Guide to Fork This Repo
+## LOCAL INSTALLATION
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
 <ol>
