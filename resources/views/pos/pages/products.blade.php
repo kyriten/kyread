@@ -55,10 +55,18 @@
                                             <td>
                                                 <a class="btn btn-warning" href="/products/{{ $item->id }}/edit"><i
                                                         class="bi bi-pencil"></i></a>
-                                                <a class="btn btn-danger fw-bold text-light mt-2"
-                                                    href="{{ route('products.destroy', [$item->id]) }}"
+                                                <form class="d-inline" action="/products/{{ $item->id }}"
+                                                    method="POST">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button class="btn btn-danger"
+                                                        onclick="return confirm('Are you sure to delete your product?')"><i
+                                                            class="bi bi-trash"></i></button>
+                                                </form>
+                                                {{-- <a class="btn btn-danger fw-bold text-light mt-2"
+                                                    href="/products/{{ $item->id }}"
                                                     onclick="return confirm('Are you sure to remove your account?')"><i
-                                                        class="bi bi-trash"></i></a>
+                                                        class="bi bi-trash"></i></a> --}}
                                             </td>
                                             {{-- <td>{{ $item->sale_date }}</td> --}}
                                             {{-- <td>{{ $item->stock_update }}</td> --}}
