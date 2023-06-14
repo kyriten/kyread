@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('pos', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->string('email')->unique();
+            $table->string('name');
             $table->string('description');
-            $table->string('password');
+            $table->string('harga');
+            $table->string('weight');
+            $table->string('stock');
             $table->timestamps();
         });
     }
