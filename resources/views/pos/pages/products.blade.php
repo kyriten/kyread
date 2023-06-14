@@ -53,6 +53,10 @@
                                             <td><span>Rp </span>{{ $item->harga }}</td>
                                             <td>{{ $item->weight }} <span>gr</span></td>
                                             <td>
+                                                <!-- Button trigger modal -->
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                    data-bs-target="#productInfo" type="button"><i class="bi bi-eye"></i>
+                                                </button>
                                                 <a class="btn btn-warning" href="/products/{{ $item->id }}/edit"><i
                                                         class="bi bi-pencil"></i></a>
                                                 <form class="d-inline" action="/products/{{ $item->id }}"
@@ -71,6 +75,41 @@
                                             {{-- <td>{{ $item->sale_date }}</td> --}}
                                             {{-- <td>{{ $item->stock_update }}</td> --}}
                                         </tr>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="productInfo" aria-labelledby="productInfoLabel"
+                                            aria-hidden="true" tabindex="-1">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="productInfoLabel">
+                                                            {{ $item->name }}
+                                                            <span
+                                                                class="position-absolute top-0 start-50 translate-middle badge bg-primary text-light">Novel</span>
+                                                        </h5>
+                                                        <button class="btn-close" data-bs-dismiss="modal" type="button"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="image-wrapper">
+                                                            <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                                                                src="http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
+                                                                alt="" width="100" />
+                                                        </div>
+                                                        <div class="mt-3">
+                                                            <h5 class="text-primary">
+                                                                Description:
+                                                            </h5>
+                                                            {{ $item->description }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-center fw-bold">
+                                                        <small style="color: rgb(67, 170, 255)">Rp</small><big
+                                                            class="me-1"
+                                                            style="color: rgb(67, 170, 255)">{{ $item->harga }}</big>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     @empty
                                         <tr>
                                             <td colspan="7">No products available here</td>
@@ -79,7 +118,6 @@
                                 </tbody>
                             </table>
                             <!-- End Table with stripped rows -->
-
                         </div>
                     </div>
 
