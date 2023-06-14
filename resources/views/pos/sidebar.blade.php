@@ -27,11 +27,13 @@
                         <i class="bi bi-circle"></i><span>Add Product</span>
                     </a>
                 </li>
-                <li>
-                    <a href="/edit-product">
-                        <i class="bi bi-circle"></i><span>Edit Product</span>
-                    </a>
-                </li>
+                {{-- @foreach ($products as $item)
+                    <li>
+                        <a href="{{ 'edit-product/' . $item->id }}">
+                            <i class="bi bi-circle"></i><span>Edit Product</span>
+                        </a>
+                    </li>
+                @endforeach --}}
             </ul>
         </li><!-- End Forms Nav -->
 
@@ -56,25 +58,21 @@
         <li class="nav-heading">Help & Services</li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/faq">
+            <a class="nav-link" href="/faq">
                 <i class="bi bi-question-circle"></i>
                 <span>FAQ</span>
             </a>
         </li><!-- End F.A.Q Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/contact">
+            <a class="nav-link" href="/contact">
                 <i class="bi bi-send-plus"></i>
                 <span>Contact Us</span>
             </a>
         </li><!-- End F.A.Q Page Nav -->
 
         <li class="nav-item">
-            <form action="/shop-logout" method="POST">
-                @csrf
-                <button class="nav-link collapsed" type="submit" onclick="logout()"><i
-                        class="bi bi-box-arrow-right"></i><span>Logout</span></button>
-            </form>
+            <a class="nav-link" href="/home"><i class="bi bi-house"></i><span>Home</span></a>
         </li>
     </ul>
 

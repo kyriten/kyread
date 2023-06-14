@@ -16,6 +16,12 @@
 
         <section class="section">
             <div class="row">
+                @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('success') }}
+                        <button class="btn-close" data-bs-dismiss="alert" type="button" aria-label="Close"></button>
+                    </div>
+                @endif
                 <div class="col-lg-6">
 
                     <div class="card">
@@ -49,21 +55,25 @@
                             <h5 class="card-title fs-4">Detail Product</h5>
 
                             <!-- Detail Product Form -->
-                            <form>
+                            <form action="/products/{{ $product->id }}" method="POST">
+                                @csrf
+
+                                @method('PUT')
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label">Information</label>
                                     <div class="col-sm-10">
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="floatingInput" name="name" type="text"
-                                                placeholder="Enter product name">
+                                                value="{{ $product->name }}" placeholder="Enter product name">
                                             <label for="floatingInput">Name of Product</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="floatingPassword" type="text"
+                                            <input class="form-control" id="floatingPassword" name="description"
+                                                type="text" value="{{ $product->description }}"
                                                 placeholder="Enter product description">
                                             <label for="floatingPassword">Product Description and #hashtag</label>
                                         </div>
-                                        <div class="form-floating mb-3">
+                                        {{-- <div class="form-floating mb-3">
                                             <select class="form-select" id="floatingSelect"
                                                 aria-label="Floating label select example">
                                                 <option selected>None</option>
@@ -77,7 +87,7 @@
                                                 <option value="8">Encyclopedia</option>
                                             </select>
                                             <label for="floatingSelect">Select Category</label>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
 
@@ -87,13 +97,13 @@
 
                                         <div class="input-group mb-3">
                                             <span class="input-group-text">Rp</span>
-                                            <input class="form-control" type="text"
-                                                placeholder="Enter product price (in Rupiah)">
+                                            <input class="form-control" name="harga" type="text"
+                                                value="{{ $product->harga }}" placeholder="Enter product price (in Rupiah)">
                                             <span class="input-group-text border-0">.00</span>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="floatingInput" name="name" type="text"
-                                                placeholder="Enter stock of product">
+                                            <input class="form-control" id="floatingInput" name="stock" type="text"
+                                                value="{{ $product->stock }}" placeholder="Enter stock of product">
                                             <label for="floatingInput">Stock</label>
                                         </div>
                                     </div>
@@ -104,7 +114,8 @@
                                     <div class="col-sm-10">
 
                                         <div class="input-group mb-3">
-                                            <input class="form-control" type="text" placeholder="Enter product weight">
+                                            <input class="form-control" name="weight" type="text"
+                                                value="{{ $product->weight }}" placeholder="Enter product weight">
                                             <span class="input-group-text border-0">gr</span>
                                         </div>
                                         <div class="card border border-1 bg-transparent shadow-none p-2">
@@ -120,7 +131,8 @@
                                                 class="form-check form-switch d-flex align-items-center justify-content-between">
                                                 <label class="form-check-label" for="flexSwitchCheckDefault">J&T
                                                     Express</label>
-                                                <input class="form-check-input" id="flexSwitchCheckDefault" type="checkbox">
+                                                <input class="form-check-input" id="flexSwitchCheckDefault"
+                                                    type="checkbox">
                                             </div>
                                             <div
                                                 class="form-check form-switch d-flex align-items-center justify-content-between">

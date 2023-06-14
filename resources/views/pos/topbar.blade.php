@@ -210,15 +210,6 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-
-                    <li>
-                        <form action="/shop-logout" method="POST">
-                            @csrf
-                            <button class="dropdown-item d-flex align-items-center" type="submit"
-                                onclick="logout()"><i class="bi bi-box-arrow-right"></i>Logout</button>
-                        </form>
-                    </li>
-
                 </ul><!-- End Profile Dropdown Items -->
             </li><!-- End Profile Nav -->
 

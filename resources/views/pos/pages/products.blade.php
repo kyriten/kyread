@@ -16,7 +16,12 @@
         <section class="section">
             <div class="row">
                 <div class="col-lg-12">
-
+                    @if (session()->has('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button class="btn-close" data-bs-dismiss="alert" type="button" aria-label="Close"></button>
+                        </div>
+                    @endif
                     <div class="card">
                         <div class="card-body p-5">
 
@@ -25,28 +30,44 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Image</th>
+                                        {{-- <th scope="col">Image</th> --}}
                                         <th scope="col">Name</th>
-                                        <th scope="col">Category</th>
+                                        {{-- <th scope="col">Category</th> --}}
+                                        <th scope="col">Description</th>
                                         <th scope="col">Stock</th>
-                                        <th scope="col">Items Sold</th>
-                                        <th scope="col">Sale Date</th>
-                                        <th scope="col">Stock Update</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Weight</th>
+                                        <th scope="col">Action</th>
+                                        {{-- <th scope="col">Stock Update</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($products as $item)
+                                    @forelse ($products as $item)
                                         <tr>
-                                            <th scope="row">{{ $item->id }}</th>
-                                            <td>{{ $item->image }}</td>
+                                            <th scope="row">{{ $loop->iteration }}</th>
+                                            {{-- <td>{{ $item->image }}</td> --}}
                                             <td>{{ $item->name }}</td>
-                                            <td>{{ $item->category->name }}</td>
+                                            {{-- <td>{{ $item->category->name }}</td> --}}
+                                            <td>{{ $item->description }}</td>
                                             <td>{{ $item->stock }}</td>
-                                            <td>{{ $item->sold }}</td>
-                                            <td>{{ $item->sale_date }}</td>
-                                            <td>{{ $item->stock_update }}</td>
+                                            <td><span>Rp </span>{{ $item->harga }}</td>
+                                            <td>{{ $item->weight }} <span>gr</span></td>
+                                            <td>
+                                                <a class="btn btn-warning" href="/products/{{ $item->id }}/edit"><i
+                                                        class="bi bi-pencil"></i></a>
+                                                <a class="btn btn-danger fw-bold text-light mt-2"
+                                                    href="{{ route('products.destroy', [$item->id]) }}"
+                                                    onclick="return confirm('Are you sure to remove your account?')"><i
+                                                        class="bi bi-trash"></i></a>
+                                            </td>
+                                            {{-- <td>{{ $item->sale_date }}</td> --}}
+                                            {{-- <td>{{ $item->stock_update }}</td> --}}
                                         </tr>
-                                    @endforeach
+                                    @empty
+                                        <tr>
+                                            <td colspan="7">No products available here</td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                             <!-- End Table with stripped rows -->
