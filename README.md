@@ -16,7 +16,7 @@
 
 
 
-## LOCAL INSTALLATION
+## APP SPECIFICATIONS
 
 A mini e-marketplace for bookstore. So here are the specifications of the application:
 <ol>
@@ -28,7 +28,8 @@ A mini e-marketplace for bookstore. So here are the specifications of the applic
 <li>MDB Version: 6.3.1</li>
 <li>Dashboard Template: <a href="https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/">NiceAdmin by Bootstrapmade (Last updated: May 30, 2023)</a></li>
 </ol>
-  
+
+## LOCAL INSTALLATION
   Do this for access this project at your computer:
 
 ### 1. Add vendor <br>
