@@ -8,7 +8,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +24,7 @@ use App\Http\Controllers\ProductController;
 //     return view('home');
 // });
 
-Route::get('/home', [HomeController::class, 'index'])->middleware('auth');
+Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
 //Profile Routes
 Route::get('/edit-profile', [UserController::class, 'edit'])->name('profile');
@@ -63,7 +62,3 @@ Route::get('/feature-locked', [PosController::class, 'locked']);
 // Route::get('/shop-login', [PosController::class, 'createLogin']);
 // Route::post('/shop-login', [PosController::class, 'authenticate']);
 // Route::post('/shop-logout', [PosController::class, 'shoplogout']);
-
-// Route::get('products/checkSlug', [ProductController::class, 'checkSlug']);
-Route::get('/image', [ImageController::class, 'index'])->name('image.index');
-Route::post('/image', [ImageController::class, 'store'])->name('image.store');
