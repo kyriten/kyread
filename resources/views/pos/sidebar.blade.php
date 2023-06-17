@@ -58,16 +58,18 @@
         <li class="nav-heading">Help & Services</li>
 
         <li class="nav-item">
-            <a class="nav-link" href="/faq">
+            <a class="nav-link" href="/feature-locked">
                 <i class="bi bi-question-circle"></i>
                 <span>FAQ</span>
+                <i class="bi bi-lock"></i>
             </a>
         </li><!-- End F.A.Q Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link" href="/contact">
+            <a class="nav-link" href="/feature-locked">
                 <i class="bi bi-send-plus"></i>
                 <span>Contact Us</span>
+                <i class="bi bi-lock"></i>
             </a>
         </li><!-- End F.A.Q Page Nav -->
 

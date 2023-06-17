@@ -15,49 +15,54 @@
         </div><!-- End Page Title -->
 
         <section class="section">
-            <div class="row">
-                <div class="col-lg-6">
-                    @csrf
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4">Upload Product Image
-                                <br>
-                                <small class="text-dark fs-6">Only one image can be uploaded</small>
-                            </h5>
-                            <!--Image-->
-                            <form action="{{ route('image.store') }}" method="POST" enctype="multipart/form-data">
-                                @csrf
+            <form action="/add-product" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="row">
+                    <div class="col-lg-6">
+                        @csrf
+                        <div class="card">
+                            <div class="card-body">
+
+                                {{-- Image --}}
+                                <h5 class="card-title fs-4">Upload Product Image
+                                    <br>
+                                    <small class="text-dark fs-6">Only one image can be uploaded. Please Upload with</small>
+                                </h5>
+
                                 <div>
                                     <div class="mb-4 d-flex justify-content-center">
-                                        <img src="http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
+                                        <img id="imgPreview"
+                                            src="http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
                                             alt="image placeholder" style="width: 300px;" />
+                                    </div>
+                                    <div class="mb-2 d-block text-center text-danger">
+                                        @error('image')
+                                            <span class="text-red-600 text-sm">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                     <div class="d-flex justify-content-center">
                                         <div class="btn btn-primary btn-rounded">
                                             <label class="form-label text-white m-1" for="customFile1">Choose file</label>
                                             <input
-                                                class="form-control d-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                                                id="customFile1" name="image" type="file" />
-                                            @error('image')
-                                                <span class="text-red-600 text-sm">{{ $message }}</span>
-                                            @enderror
+                                                class="imgPreview form-control d-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 @error('image') is-invalid @enderror"
+                                                id="customFile1" name="image" type="file"
+                                                accept="image/png, image/jpeg" onchange="showPreview(event);">
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                                {{-- End Image --}}
+
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-6">
+                    <div class="col-lg-6">
 
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title fs-4">Detail Product</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title fs-4">Detail Product</h5>
 
-                            <!-- Detail Product Form -->
-                            <form action="/add-product" method="POST">
-                                @csrf
+                                <!-- Detail Product Form -->
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label">Information</label>
                                     <div class="col-sm-10">
@@ -156,14 +161,15 @@
                                         type="submit">{{ __('SUBMIT') }}</button>
                                 </div>
 
-                            </form><!-- End General Form Elements -->
+                                <!-- End General Form Elements -->
+
+                            </div>
 
                         </div>
 
                     </div>
-
                 </div>
-            </div>
+            </form>
         </section>
 
     </main><!-- End #main -->

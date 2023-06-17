@@ -33,6 +33,26 @@ class PosController extends Controller
         ]);
     }
 
+    public function storeproduct(Request $request)
+    {
+        $validatedData = $request->validate([
+            'image' => 'image|file|max:1024',
+            'name' => 'required|max:15',
+            'description' => 'required|max:255',
+            'harga' => 'required',
+            'weight' => 'required',
+            'stock' => 'required',
+        ]);
+
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('product-images');
+        }
+
+        Pos::create($validatedData);
+        $request->session()->flash('success', 'Product has been added');
+        return redirect('/products');
+    }
+
     public function edit($id)
     {
         $products = Pos::find($id);
@@ -42,41 +62,17 @@ class PosController extends Controller
     public function update(Request $request, $id)
     {
         $products = Pos::find($id);
-        // $product->name = $request->input('name');
-        // $product->description = $request->input('description');
-        // $product->harga = $request->input('harga');
-        // $product->weight = $request->input('weight');
-        // $product->stock = $request->input('stock');
         $input = $request->all();
+        if ($request->file('image')) {
+            $input['image'] = $request->file('image')->store('product-images');
+        }
         $products->update($input);
         $request->session()->flash('success', 'Product has been updated');
         return redirect('/products');
     }
 
-    public function storeproduct(Request $request)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|max:15',
-            'description' => 'required|max:255',
-            'harga' => 'required',
-            'weight' => 'required',
-            'stock' => 'required',
-        ]);
-
-        Pos::create($validatedData);
-        $request->session()->flash('success', 'Product has been added');
-        return redirect('/products');
-    }
-
-    // public function storeprofile()
-    // {
-    //     $pos = Pos::all();
-    //     return view('pos.pages.storeprofile', compact('pos'));
-    // }
     public function destroy($id)
     {
-        // $pos->delete();
-        // return redirect()->route('products.index');
         Pos::destroy($id);
         return redirect('/products')->with('success', 'Product has been deleted');
     }

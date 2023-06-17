@@ -2,7 +2,6 @@
 
 @section('products')
     <main class="main" id="main">
-
         <div class="pagetitle">
             <h1>Product List</h1>
             <nav>
@@ -30,7 +29,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        {{-- <th scope="col">Image</th> --}}
+                                        <th scope="col">Image</th>
                                         <th scope="col">Name</th>
                                         {{-- <th scope="col">Category</th> --}}
                                         <th scope="col">Description</th>
@@ -45,18 +44,31 @@
                                     @forelse ($products as $item)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration }}</th>
-                                            {{-- <td>{{ $item->image }}</td> --}}
+                                            <td>
+                                                @if ($item->image)
+                                                    <img id="imgPreview" src="{{ asset('storage/' . $item->image) }}"
+                                                        alt="{{ $item->name }}" style="height: 132px; width: 188px" />
+                                                @else
+                                                    <img id="imgPreview"
+                                                        src="http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
+                                                        alt="image placeholder" style="height: 132px; width: 188px" />
+                                                @endif
+                                                {{-- <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}"
+                                                    style="height: 132px; width: 188px"> --}}
+                                            </td>
                                             <td>{{ $item->name }}</td>
                                             {{-- <td>{{ $item->category->name }}</td> --}}
                                             <td>{{ $item->description }}</td>
-                                            <td>{{ $item->stock }}</td>
+                                            <td>{{ $item->stock }} <span>buah</span></td>
                                             <td><span>Rp </span>{{ $item->harga }}</td>
                                             <td>{{ $item->weight }} <span>gr</span></td>
                                             <td>
                                                 <!-- Button trigger modal -->
                                                 <button class="btn btn-info" data-bs-toggle="modal"
-                                                    data-bs-target="#productInfo" type="button"><i class="bi bi-eye"></i>
+                                                    data-bs-target="#{{ $item->id }}" type="button"><i
+                                                        class="bi bi-eye"></i>
                                                 </button>
+
                                                 <a class="btn btn-warning" href="/products/{{ $item->id }}/edit"><i
                                                         class="bi bi-pencil"></i></a>
                                                 <form class="d-inline" action="/products/{{ $item->id }}"
@@ -67,16 +79,12 @@
                                                         onclick="return confirm('Are you sure to delete your product?')"><i
                                                             class="bi bi-trash"></i></button>
                                                 </form>
-                                                {{-- <a class="btn btn-danger fw-bold text-light mt-2"
-                                                    href="/products/{{ $item->id }}"
-                                                    onclick="return confirm('Are you sure to remove your account?')"><i
-                                                        class="bi bi-trash"></i></a> --}}
                                             </td>
                                             {{-- <td>{{ $item->sale_date }}</td> --}}
                                             {{-- <td>{{ $item->stock_update }}</td> --}}
                                         </tr>
                                         <!-- Modal -->
-                                        <div class="modal fade" id="productInfo" aria-labelledby="productInfoLabel"
+                                        <div class="modal fade" id="{{ $item->id }}" aria-labelledby="productInfoLabel"
                                             aria-hidden="true" tabindex="-1">
                                             <div class="modal-dialog modal-dialog-centered">
                                                 <div class="modal-content">
@@ -91,9 +99,20 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="image-wrapper">
-                                                            <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                                                            {{-- <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
                                                                 src="http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
-                                                                alt="" width="100" />
+                                                                alt="" width="100" /> --}}
+                                                            @if ($item->image)
+                                                                <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                                                                    id="imgPreview"
+                                                                    src="{{ asset('storage/' . $item->image) }}"
+                                                                    alt="{{ $item->name }}" width="100" />
+                                                            @else
+                                                                <img class="card-img-top img-thumbnail mx-auto d-block mt-2"
+                                                                    id="imgPreview"
+                                                                    src="http://www.proedsolutions.com/wp-content/themes/micron/images/placeholders/placeholder_large.jpg"
+                                                                    alt="image placeholder" width="100" />
+                                                            @endif
                                                         </div>
                                                         <div class="mt-3">
                                                             <h5 class="text-primary">

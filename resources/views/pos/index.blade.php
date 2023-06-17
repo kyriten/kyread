@@ -54,9 +54,9 @@
     @yield('featurelocked')
 
     @include('partials.footer')
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
 
+    @include('pos.feature.image')
     <!-- Vendor JS Files -->
     <script src="{{ asset('pos/assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('pos/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

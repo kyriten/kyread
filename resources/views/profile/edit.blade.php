@@ -208,7 +208,7 @@
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
                                     <div class="text-end">
                                         <button class="btn btn-secondary fw-bold text-primary" id="reset"
-                                            type="reset">{{ __('RESET') }}</button>
+                                            type="reset">{{ 'RESET' }}</button>
                                         <button class="btn btn-primary fw-bold text-light" id="submit"
                                             type="submit">{{ __('SAVE') }}</button>
                                     </div>
